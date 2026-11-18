@@ -35,7 +35,13 @@ jobs:
         with: { name: desktop, path: dist/* }
       - if: startsWith(github.ref, 'refs/tags/v')
         uses: softprops/action-gh-release@v2
-        with: { files: dist/* }
+        with:
+          # The downloads people need: zips for Windows and Linux (the Linux .tar.gz too). Bare program files
+          # stay in the run's artifacts only, since many browsers refuse to download bare .exe files.
+          files: |
+            dist/*.zip
+            dist/*.tar.gz
+          generate_release_notes: true
 
   mac:
     # One app for Intel and Apple Silicon Macs, built on a Mac so it is joined with lipo and signed ad hoc.
@@ -86,5 +92,7 @@ jobs:
       - uses: actions/setup-node@v4
         with: { node-version: "22" }
       - run: npm install
+      - run: pod --version   # CocoaPods (pre-installed on GitHub's Mac runners) installs the iOS plugins
       - run: npm run ios
-      - run: xcodebuild -project ios/App/App.xcodeproj -scheme App -sdk iphonesimulator -configuration Debug CODE_SIGNING_ALLOWED=NO build
+      # A CocoaPods project is built through its workspace, which includes the plugins.
+      - run: xcodebuild -workspace ios/App/App.xcworkspace -scheme App -sdk iphonesimulator -destination "generic/platform=iOS Simulator" -configuration Debug CODE_SIGNING_ALLOWED=NO build

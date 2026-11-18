@@ -38,7 +38,7 @@ Each file is a single program of about 7 MB with the app built in. Nothing else 
 The mobile app runs the same engine on the phone itself, so it needs no computer or server.
 
 - **Android:** install `ResearchDigest-android.apk`. Android will ask to allow installs from your browser or file manager the first time.
-- **iOS:** Apple only allows apps from the App Store or built with Xcode. On a Mac with Xcode: `cd mobile && npm install && npm run ios && npx cap open ios`, then press Run with your iPhone connected (a free Apple ID works for your own device).
+- **iOS:** Apple only allows apps from the App Store or built with Xcode. On a Mac with Xcode and CocoaPods (`brew install cocoapods`): `cd mobile && npm install && npm run ios && npx cap open ios`, then press Run with your iPhone connected (a free Apple ID works for your own device).
 - **Any phone, no install:** run the desktop program with `-lan`, open the printed address on the phone, then use **Add to Home Screen**.
 
 ### Building the Android app

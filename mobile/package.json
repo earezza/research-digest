@@ -8,7 +8,7 @@
     "build": "node scripts/copy-web.mjs",
     "android": "npm run build && npx cap add android && npx @capacitor/assets generate --android && npx cap sync android && node scripts/set-version.mjs",
     "android:apk": "cd android && ./gradlew assembleDebug",
-    "ios": "npm run build && npx cap add ios --packagemanager SPM && npx @capacitor/assets generate --ios && npx cap sync ios && node scripts/set-version.mjs"
+    "ios": "npm run build && npx cap add ios && npx @capacitor/assets generate --ios && npx cap sync ios && node scripts/set-version.mjs"
   },
   "dependencies": {
     "@capacitor/android": "^7.4.0",
