@@ -1,0 +1,90 @@
+# Builds every version of Research Digest. Push to GitHub (or run it from the Actions tab) and download the files
+# from the run's "Artifacts" section. Tag a commit like v1.0.0 to also publish them as a release.
+name: build
+on:
+  push:
+  workflow_dispatch:
+permissions:
+  contents: write
+
+jobs:
+  desktop:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with: { go-version: "1.24" }
+      - uses: actions/setup-node@v4
+        with: { node-version: "22" }
+      - run: go test ./... && node --test tests/engine.test.mjs tests/insight.test.mjs
+      - name: Build Windows and Linux executables
+        run: |
+          mkdir -p dist
+          for t in windows/amd64 windows/arm64 linux/amd64 linux/arm64; do
+            os=${t%/*}; arch=${t#*/}; ext=""; flags="-s -w"
+            # Windows: a windowed program, so no terminal opens (it runs in the background and opens the browser).
+            [ "$os" = windows ] && ext=".exe" && flags="$flags -H=windowsgui"
+            name="ResearchDigest-$os-$arch$ext"; [ "$arch" = amd64 ] && name="ResearchDigest-$os-x64$ext"
+            CGO_ENABLED=0 GOOS=$os GOARCH=$arch go build -trimpath -ldflags "$flags" -o "dist/$name" .
+          done
+          # Windows builds pick up the open-book icon from the rsrc_windows_*.syso files in this folder.
+          # Linux builds are also packed with the icon, a menu entry and install.sh.
+          sh build/package-linux.sh
+          python3 build/package-zips.py   # .zip copies, for sites that refuse bare .exe files
+      - uses: actions/upload-artifact@v4
+        with: { name: desktop, path: dist/* }
+      - if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with: { files: dist/* }
+
+  mac:
+    # One app for Intel and Apple Silicon Macs, built on a Mac so it is joined with lipo and signed ad hoc.
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with: { go-version: "1.24" }
+      - name: Build the Mac app
+        run: |
+          mkdir -p dist
+          for arch in amd64 arm64; do CGO_ENABLED=0 GOOS=darwin GOARCH=$arch go build -trimpath -ldflags "-s -w" -o dist/ResearchDigest-darwin-$arch .; done
+          python3 build/make-mac-app.py
+          codesign --verify --deep --strict dist/ResearchDigest.app && echo "signature OK"
+      - uses: actions/upload-artifact@v4
+        with: { name: mac, path: dist/ResearchDigest-mac.zip }
+      - if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with: { files: dist/ResearchDigest-mac.zip }
+
+  android:
+    runs-on: ubuntu-latest
+    defaults: { run: { working-directory: mobile } }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: "22" }
+      - uses: actions/setup-java@v4
+        with: { distribution: temurin, java-version: "21" }
+      - run: npm install
+      - run: npm run android
+      - name: Build installable APK
+        run: cd android && chmod +x gradlew && ./gradlew assembleDebug
+      - run: cp android/app/build/outputs/apk/debug/app-debug.apk ../ResearchDigest-android.apk
+      - uses: actions/upload-artifact@v4
+        with: { name: android, path: ResearchDigest-android.apk }
+      - if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with: { files: ResearchDigest-android.apk }
+
+  ios:
+    # Builds for the iOS Simulator to prove the project compiles. Installing on an iPhone needs Xcode on a Mac
+    # (a free Apple ID is enough for your own device); see README.
+    runs-on: macos-latest
+    defaults: { run: { working-directory: mobile } }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: "22" }
+      - run: npm install
+      - run: npm run ios
+      - run: xcodebuild -project ios/App/App.xcodeproj -scheme App -sdk iphonesimulator -configuration Debug CODE_SIGNING_ALLOWED=NO build

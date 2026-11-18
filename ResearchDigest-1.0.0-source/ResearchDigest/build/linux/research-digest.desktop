@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=Research Digest
+GenericName=Research newsletter
+Comment=New research from journals and preprints, ranked live each time you open it
+Exec=research-digest
+Icon=research-digest
+Terminal=false
+Categories=Education;Science;
+Keywords=research;papers;science;journals;preprints;
+StartupNotify=false

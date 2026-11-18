@@ -1,0 +1,464 @@
+{
+ "windows": [
+  {
+   "id": "day",
+   "label": "Today",
+   "days": 2
+  },
+  {
+   "id": "week",
+   "label": "This week",
+   "days": 7
+  },
+  {
+   "id": "month",
+   "label": "This month",
+   "days": 30
+  },
+  {
+   "id": "year",
+   "label": "This year",
+   "days": 365
+  },
+  {
+   "id": "5y",
+   "label": "Past 5 years",
+   "days": 1826
+  },
+  {
+   "id": "all",
+   "label": "All time",
+   "days": 0
+  }
+ ],
+ "fields": [
+  {
+   "id": "bioeng",
+   "label": "Bioengineering",
+   "hint": "Biomaterials, tissue engineering, medical devices, biosensors, drug delivery systems, microfluidics, neural interfaces"
+  },
+  {
+   "id": "bioinfo",
+   "label": "Bioinformatics",
+   "hint": "Computational biology methods, software, databases and models for biological data"
+  },
+  {
+   "id": "biotech",
+   "label": "Biotechnology",
+   "hint": "Gene and cell therapy, genome editing, protein and antibody engineering, synthetic biology"
+  },
+  {
+   "id": "cellmol",
+   "label": "Cellular and Molecular Biology",
+   "hint": "Mechanisms in cells and molecules, development, neuroscience, immunology, microbiology, structural biology"
+  },
+  {
+   "id": "medicine",
+   "label": "Medicine",
+   "hint": "Clinical trials, patient studies, diagnosis and treatment"
+  },
+  {
+   "id": "omics",
+   "label": "Omics",
+   "hint": "Genomics, transcriptomics, proteomics, metabolomics, single-cell and spatial atlases"
+  },
+  {
+   "id": "publichealth",
+   "label": "Public Health",
+   "hint": "Epidemiology, population health, prevention, vaccination, health policy and global health"
+  }
+ ],
+ "journals": [
+  [
+   "Nature",
+   "0028-0836",
+   1,
+   ""
+  ],
+  [
+   "Science",
+   "0036-8075",
+   1,
+   ""
+  ],
+  [
+   "Cell",
+   "0092-8674",
+   1,
+   "cellmol"
+  ],
+  [
+   "New England Journal of Medicine",
+   "0028-4793",
+   1,
+   "medicine"
+  ],
+  [
+   "The Lancet",
+   "0140-6736",
+   1,
+   "medicine"
+  ],
+  [
+   "JAMA",
+   "0098-7484",
+   1,
+   "medicine"
+  ],
+  [
+   "Nature Medicine",
+   "1078-8956",
+   1,
+   "medicine"
+  ],
+  [
+   "Science Translational Medicine",
+   "1946-6234",
+   1,
+   "medicine"
+  ],
+  [
+   "Nature Biotechnology",
+   "1087-0156",
+   1,
+   "biotech"
+  ],
+  [
+   "Nature Methods",
+   "1548-7091",
+   1,
+   ""
+  ],
+  [
+   "Nature Genetics",
+   "1061-4036",
+   1,
+   "omics"
+  ],
+  [
+   "Nature Cell Biology",
+   "1465-7392",
+   1,
+   "cellmol"
+  ],
+  [
+   "Nature Biomedical Engineering",
+   "2157-846X",
+   1,
+   "bioeng"
+  ],
+  [
+   "The Lancet Public Health",
+   "2468-2667",
+   1,
+   "publichealth"
+  ],
+  [
+   "PNAS",
+   "0027-8424",
+   2,
+   ""
+  ],
+  [
+   "Science Advances",
+   "2375-2548",
+   2,
+   ""
+  ],
+  [
+   "Nature Communications",
+   "2041-1723",
+   2,
+   ""
+  ],
+  [
+   "Molecular Cell",
+   "1097-2765",
+   2,
+   "cellmol"
+  ],
+  [
+   "Cell Stem Cell",
+   "1934-5909",
+   2,
+   "cellmol"
+  ],
+  [
+   "Nature Structural & Molecular Biology",
+   "1545-9993",
+   2,
+   "cellmol"
+  ],
+  [
+   "Skeletal Muscle",
+   "2044-5040",
+   2,
+   "cellmol"
+  ],
+  [
+   "Cell Systems",
+   "2405-4712",
+   2,
+   "bioinfo"
+  ],
+  [
+   "Nucleic Acids Research",
+   "0305-1048",
+   2,
+   "bioinfo"
+  ],
+  [
+   "Bioinformatics",
+   "1367-4803",
+   2,
+   "bioinfo"
+  ],
+  [
+   "Cell Genomics",
+   "2666-979X",
+   2,
+   "omics"
+  ],
+  [
+   "Genome Biology",
+   "1474-760X",
+   2,
+   "omics"
+  ],
+  [
+   "Genome Research",
+   "1088-9051",
+   2,
+   "omics"
+  ],
+  [
+   "Nature Chemical Biology",
+   "1552-4450",
+   2,
+   "biotech"
+  ],
+  [
+   "Biomaterials",
+   "0142-9612",
+   2,
+   "bioeng"
+  ],
+  [
+   "Lab on a Chip",
+   "1473-0197",
+   2,
+   "bioeng"
+  ],
+  [
+   "The BMJ",
+   "0959-8138",
+   2,
+   "medicine"
+  ],
+  [
+   "Circulation",
+   "0009-7322",
+   2,
+   "medicine"
+  ],
+  [
+   "The Lancet Infectious Diseases",
+   "1473-3099",
+   2,
+   ""
+  ],
+  [
+   "The Lancet Global Health",
+   "2214-109X",
+   2,
+   "publichealth"
+  ],
+  [
+   "BMJ Global Health",
+   "2059-7908",
+   2,
+   "publichealth"
+  ],
+  [
+   "American Journal of Public Health",
+   "0090-0036",
+   2,
+   "publichealth"
+  ],
+  [
+   "International Journal of Epidemiology",
+   "0300-5771",
+   2,
+   "publichealth"
+  ]
+ ],
+ "arxivCategories": [
+  "q-bio.GN",
+  "q-bio.QM",
+  "q-bio.BM",
+  "q-bio.CB",
+  "q-bio.MN",
+  "q-bio.NC",
+  "q-bio.PE",
+  "q-bio.TO",
+  "physics.bio-ph",
+  "physics.med-ph"
+ ],
+ "arxivField": {
+  "q-bio.GN": "omics",
+  "q-bio.QM": "bioinfo",
+  "q-bio.MN": "bioinfo",
+  "q-bio.BM": "cellmol",
+  "q-bio.CB": "cellmol",
+  "q-bio.NC": "cellmol",
+  "q-bio.TO": "bioeng",
+  "physics.med-ph": "bioeng",
+  "physics.bio-ph": "cellmol"
+ },
+ "rxivField": {
+  "bioinformatics": "bioinfo",
+  "systems biology": "bioinfo",
+  "genomics": "omics",
+  "genetics": "omics",
+  "synthetic biology": "biotech",
+  "bioengineering": "bioeng",
+  "cell biology": "cellmol",
+  "molecular biology": "cellmol",
+  "biochemistry": "cellmol",
+  "biophysics": "cellmol",
+  "neuroscience": "cellmol",
+  "immunology": "cellmol",
+  "microbiology": "cellmol",
+  "developmental biology": "cellmol",
+  "cancer biology": "cellmol",
+  "physiology": "cellmol",
+  "pharmacology and toxicology": "medicine",
+  "epidemiology": "publichealth",
+  "public and global health": "publichealth",
+  "health policy": "publichealth",
+  "health economics": "publichealth",
+  "occupational and environmental health": "publichealth",
+  "health systems and quality improvement": "publichealth",
+  "infectious diseases": "",
+  "health informatics": "bioinfo",
+  "genetic and genomic medicine": "omics"
+ },
+ "fieldRules": [
+  [
+   "bioinfo",
+   "\\b(computational|algorithms?|software|pipelines?|databases?|deep learning|machine learning|neural networks?|language models?|toolkit|web server)\\b.{0,200}\\b(genes?|proteins?|cells?|sequenc\\w*|genom\\w*|biolog\\w*|molecul\\w*|transcript\\w*)|\\b(genes?|proteins?|cells?|sequenc\\w*|genom\\w*)\\b.{0,200}\\b(computational|algorithms?|software|deep learning|machine learning|toolkit)\\b"
+  ],
+  [
+   "bioeng",
+   "\\b(tissue engineering|biomaterials?|scaffolds?|hydrogels?|organ-on-a-chip|organs?-on-chips?|microfluidic\\w*|implants?|implantable|prosthe\\w*|biosensors?|wearables?|bioprint\\w*|drug delivery|nanoparticles?|neural interfaces?|brain-computer|medical devices?|biomechanic\\w*|bioelectronic\\w*)\\b"
+  ],
+  [
+   "biotech",
+   "\\b(crispr|base edit\\w*|prime edit\\w*|genome editing|gene therap\\w*|car-?t|cell therap\\w*|antibod(y|ies)|protein design|aav|lipid nanoparticles?|synthetic biology|bioprocess\\w*|biomanufactur\\w*|mrna vaccines?)\\b"
+  ],
+  [
+   "omics",
+   "\\b(single-cell|single-nucleus|transcriptom\\w*|proteom\\w*|metabolom\\w*|epigenom\\w*|genomics|genome-wide|whole-genome|genome sequencing|exome|gwas|multi-omic\\w*|spatial transcriptom\\w*|spatial omics|atlas|pangenom\\w*)\\b"
+  ],
+  [
+   "publichealth",
+   "\\b(public health|epidemiolog\\w*|population-based|nationwide|global health|health policy|vaccination coverage|immuni[sz]ation|prevalence|socioeconomic|disparit(y|ies)|life expectancy|outbreaks?|disease surveillance|county-level|counties|low- and middle-income|burden of disease|screening programmes?|air pollution)\\b"
+  ],
+  [
+   "medicine",
+   "\\b(patients?|clinical|trials?|cohorts?|mortality|therap(y|ies)|diseases?|cancers?|diagnos\\w*|hospitals?|vaccines?|treatments?|surgical|postoperative|perioperative|infections?)\\b"
+  ],
+  [
+   "cellmol",
+   "\\b(cells?|cellular|proteins?|neurons?|mitochondri\\w*|signal(l)?ing|receptors?|enzymes?|rna|dna|chromatin|immune|molecular|gene expression|organoids?|embryo\\w*|stem cells?)\\b"
+  ]
+ ],
+ "cues": [
+  "\\bfirst\\b",
+  "\\bphase (3|iii)\\b",
+  "\\brandomi[sz]ed\\b",
+  "\\batlas\\b",
+  "\\bfoundation models?\\b",
+  "\\bwe (show|demonstrate|discover|reveal|report|identify)\\b",
+  "\\bstate[- ]of[- ]the[- ]art\\b",
+  "\\bin vivo\\b",
+  "\\b(humans?|patients?)\\b",
+  "\\bmechanisms?\\b"
+ ],
+ "junkTitle": "^(author )?(correction|erratum|corrigendum|retraction|reply|response|editorial|publisher correction|expression of concern)\\b",
+ "keySentence": "\\b(here,? we|we (show|find|found|demonstrate|report|reveal|identify|observed)|our (results|findings)|these (results|findings))\\b",
+ "abstractSections": {
+  "background": [
+   "Background",
+   "Introduction",
+   "Objective",
+   "Objectives",
+   "Aim",
+   "Aims",
+   "Purpose",
+   "Importance",
+   "Context",
+   "Rationale",
+   "Motivation",
+   "Background and Aims",
+   "Aims and Objectives"
+  ],
+  "methods": [
+   "Methods",
+   "Method",
+   "Methodology",
+   "Materials and Methods",
+   "Design",
+   "Setting",
+   "Design, Setting, and Participants",
+   "Participants",
+   "Patients",
+   "Population",
+   "Intervention",
+   "Interventions",
+   "Exposure",
+   "Exposures",
+   "Main Outcomes and Measures",
+   "Main Outcome Measures",
+   "Measurements",
+   "Study Design",
+   "Data Sources",
+   "Study Selection",
+   "Data Extraction and Synthesis",
+   "Eligibility Criteria",
+   "Approach"
+  ],
+  "results": [
+   "Results",
+   "Findings",
+   "Methods and Findings",
+   "Main Results",
+   "Key Results",
+   "Outcomes"
+  ],
+  "conclusions": [
+   "Conclusions",
+   "Conclusion",
+   "Conclusions and Relevance",
+   "Interpretation",
+   "Significance",
+   "Implications",
+   "Discussion",
+   "Summary"
+  ],
+  "other": [
+   "Funding",
+   "Trial Registration",
+   "Registration",
+   "Availability and Implementation",
+   "Availability",
+   "Supplementary Information",
+   "Contact",
+   "Clinical Trial Registration",
+   "Keywords",
+   "Graphical Abstract",
+   "Highlights",
+   "Author Summary"
+  ]
+ }
+}

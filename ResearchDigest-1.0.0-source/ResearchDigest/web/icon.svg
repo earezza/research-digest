@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Research Digest: an open journal on journal red, in the app's ivory, ink and red -->
+  <rect width="512" height="512" rx="112" fill="#9E1B2A"/>
+  <!-- page stack under the open book -->
+  <path d="M256 410 C 206 380 142 372 84 380 V 150 C 142 142 206 150 256 180 C 306 150 370 142 428 150 V 380 C 370 372 306 380 256 410 Z" fill="#6E111C"/>
+  <!-- left and right pages -->
+  <path d="M256 392 C 206 360 146 352 96 360 V 128 C 146 120 206 128 256 160 Z" fill="#F1EBDF"/>
+  <path d="M256 392 C 306 360 366 352 416 360 V 128 C 366 120 306 128 256 160 Z" fill="#FBF8F1"/>
+  <!-- lines of text, with a heading rule on the left page -->
+  <g stroke="#B9A98F" stroke-width="10" stroke-linecap="round" fill="none">
+    <path d="M128 222 C 165 218 200 224 228 238"/><path d="M128 262 C 165 258 200 264 228 278"/><path d="M128 302 C 165 298 200 304 228 318"/>
+    <path d="M384 222 C 347 218 312 224 284 238"/><path d="M384 262 C 347 258 312 264 284 278"/><path d="M384 302 C 347 298 312 304 284 318"/>
+  </g>
+  <g stroke="#1A1714" stroke-width="14" stroke-linecap="round" fill="none">
+    <path d="M128 176 C 160 172 190 176 214 186"/>
+  </g>
+  <!-- spine -->
+  <path d="M256 160 V 392" stroke="#1A1714" stroke-width="8" stroke-linecap="round"/>
+  <!-- bookmark ribbon -->
+  <path d="M340 131 V 220 L 358 204 L 376 220 V 128" fill="#1A1714"/>
+</svg>

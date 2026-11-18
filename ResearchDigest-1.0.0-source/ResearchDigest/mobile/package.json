@@ -1,0 +1,23 @@
+{
+  "name": "research-digest-mobile",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Research Digest for Android and iOS. The engine runs on the phone; no server, keys or accounts.",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/copy-web.mjs",
+    "android": "npm run build && npx cap add android && npx @capacitor/assets generate --android && npx cap sync android && node scripts/set-version.mjs",
+    "android:apk": "cd android && ./gradlew assembleDebug",
+    "ios": "npm run build && npx cap add ios --packagemanager SPM && npx @capacitor/assets generate --ios && npx cap sync ios && node scripts/set-version.mjs"
+  },
+  "dependencies": {
+    "@capacitor/android": "^7.4.0",
+    "@capacitor/core": "^7.4.0",
+    "@capacitor/ios": "^7.4.0",
+    "@capacitor/preferences": "^7.0.1"
+  },
+  "devDependencies": {
+    "@capacitor/assets": "^3.0.5",
+    "@capacitor/cli": "^7.4.0"
+  }
+}

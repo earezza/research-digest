@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>CFBundleName</key><string>Research Digest</string>
+  <key>CFBundleDisplayName</key><string>Research Digest</string>
+  <key>CFBundleIdentifier</key><string>app.researchdigest.desktop</string>
+  <key>CFBundleExecutable</key><string>ResearchDigest</string>
+  <key>CFBundleIconFile</key><string>ResearchDigest</string>
+  <key>CFBundlePackageType</key><string>APPL</string>
+  <key>CFBundleShortVersionString</key><string>VERSION</string>
+  <key>CFBundleVersion</key><string>VERSION</string>
+  <key>CFBundleInfoDictionaryVersion</key><string>6.0</string>
+  <key>LSMinimumSystemVersion</key><string>11.0</string>
+  <key>LSApplicationCategoryType</key><string>public.app-category.education</string>
+  <!-- Runs in the background and opens in the browser: no Dock icon or menu bar of its own.
+       Stop it with Quit on the page, or by closing its tabs. -->
+  <key>LSUIElement</key><true/>
+  <key>NSHighResolutionCapable</key><true/>
+  <key>NSHumanReadableCopyright</key><string>Research Digest. Reads Europe PMC, bioRxiv, medRxiv and arXiv.</string>
+</dict>
+</plist>

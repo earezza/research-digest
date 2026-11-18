@@ -1,0 +1,10 @@
+{
+  "appId": "app.dailydigest.reader",
+  "appName": "Research Digest",
+  "webDir": "www",
+  "plugins": {
+    "CapacitorHttp": { "enabled": true }
+  },
+  "android": { "allowMixedContent": false },
+  "ios": { "contentInset": "never" }
+}
